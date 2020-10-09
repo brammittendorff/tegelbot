@@ -4,7 +4,7 @@
   "description": "Tegel bot voor als je spreuken als tegeltjes wil opslaan.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "Bram Mittendorff",
   "license": "MIT",
