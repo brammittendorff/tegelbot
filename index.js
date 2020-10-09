@@ -1,6 +1,5 @@
 const fs = require('fs');
 const http = require('http');
-const stream = require('stream');
 const request = require('request');
 const Eris = require("eris");
 const dotenv = require("dotenv")
