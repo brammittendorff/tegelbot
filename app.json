@@ -1,0 +1,7 @@
+{
+  "name": "Tegelbot For Heroku",
+  "description": "A simple bot that display custom tegeltjes",
+  "repository": "https://github.com/brammittendorff/tegelbot",
+  "logo": "https://www.tegeltjes.com/Files/3/8000/8404/ProductPhotos/Large/1052081365.jpg",
+  "keywords": ["node", "tegeltje", "custom", "bot"]
+}
