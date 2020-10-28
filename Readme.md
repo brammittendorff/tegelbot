@@ -18,7 +18,6 @@ npm install
  
 ```
 node index.js
-
 ```
 ## Deploy to Heroku
 
