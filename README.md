@@ -1,6 +1,6 @@
 # Tegeltjes bot for discord
  
-Here you can create "tegeltjes" for discord. When saying `/tegeltje Hey it is working live`.
+Here you can create "tiles" with text on them for discord. When saying `/tile say with a footer you can not stand`.
  
 ## Requirements
  
