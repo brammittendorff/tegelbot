@@ -26,6 +26,7 @@ bot.on("messageCreate", (msg) => {
     if(msg.content.includes(prefix)) {
         tileDatabase.createTable();
         let prefixSay = prefix + ' say';
+        let prefixSave = prefix + ' save';
         let prefixList = prefix + ' list';
         let prefixSelect = prefix + ' select';
         let prefixDelete = prefix + ' delete';
@@ -33,6 +34,11 @@ bot.on("messageCreate", (msg) => {
             let message = msg.content.replace(prefixSay, '');
             (async () => {
                 await tileCreate.create(msg, authorId, message);
+            })();
+        } else if (msg.content.includes(prefixSave)) {
+            let message = msg.content.replace(prefixSave, '');
+            (async () => {
+                await tileDatabase.addTile(authorId, message);
             })();
         } else if (msg.content.includes(prefixList)) {
             let page = parseInt(msg.content.replace(prefixList, '')) || 1;
