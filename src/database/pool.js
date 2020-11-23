@@ -1,6 +1,7 @@
 let mysql = require('mysql');
 let dotenv = require("dotenv");
 var util = require('util');
+var migration = require('mysql-migrations');
 
 dotenv.config()
 
@@ -29,5 +30,7 @@ pool.getConnection((err, connection) => {
 })
 
 pool.query = util.promisify(pool.query)
+
+migration.init(pool, __dirname + '/../migrations');
 
 module.exports = pool

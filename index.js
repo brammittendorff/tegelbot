@@ -24,7 +24,6 @@ bot.on("ready", () => {
 bot.on("messageCreate", (msg) => {
     const authorId = parseInt(msg.author.id);
     if(msg.content.includes(prefix)) {
-        tileDatabase.createTable();
         let prefixSay = prefix + ' say';
         let prefixSave = prefix + ' save';
         let prefixList = prefix + ' list';

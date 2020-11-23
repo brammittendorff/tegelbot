@@ -1,20 +1,5 @@
 var pool = require('./pool')
 
-async function createTable() {
-    let sql = `CREATE TABLE IF NOT EXISTS tiles (
-        id int(11) NOT NULL auto_increment,
-        member_id bigint,
-        text varchar(250) NOT NULL default '',
-        created_at timestamp not null default now(),
-        primary key (id)
-        );`
-    try {
-        return pool.query(sql);
-    } catch (err) {
-        console.error(err);
-    }
-}
-
 async function getTile(authorId, tileId) {
     try {
         return pool.query("SELECT text FROM tiles WHERE member_id=? AND id=?", [authorId, tileId]);
@@ -58,4 +43,4 @@ async function deleteTile(authorId, id) {
     }
 }
 
-module.exports = { createTable, getTile, getTiles, getTotalTiles, addTile, deleteTile }
+module.exports = { getTile, getTiles, getTotalTiles, addTile, deleteTile }

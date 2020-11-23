@@ -4,6 +4,7 @@
   "description": "Tegel bot voor als je spreuken als tegeltjes wil opslaan.",
   "main": "index.js",
   "scripts": {
+    "build": "node src/database/pool.js up",
     "start": "node index.js"
   },
   "author": "Bram Mittendorff",
@@ -13,6 +14,7 @@
     "dotenv": "^8.2.0",
     "eris": "^0.13.2",
     "mysql": "^2.18.1",
+    "mysql-migrations": "^1.0.7",
     "request": "^2.88.2"
   }
 }
