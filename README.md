@@ -25,10 +25,16 @@ node index.js
 
 ### Usage of bot
 
-Create a tile
+Create a tile and display tile
 
 ```
 /tile say When in doubt push it live
+```
+
+Save a tile
+
+```
+/tile save When in doubt push it live
 ```
 
 List last 10 tiles
