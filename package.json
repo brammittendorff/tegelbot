@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "validate": "./node_modules/.bin/eslint .",
-    "build": "npm run validate && node src/database/pool.js up",
-    "start": "node index.js"
+    "build": "node src/database/pool.js up",
+    "start": "node index.js",
+    "dev": "npm run validate && npm run build && npm run start",
+    "prod": "npm run build && npm run start"
   },
   "author": "Bram Mittendorff",
   "license": "MIT",
