@@ -4,9 +4,9 @@
   "description": "Tegel bot voor als je spreuken als tegeltjes wil opslaan.",
   "main": "index.js",
   "scripts": {
+    "validate": "./node_modules/.bin/eslint .",
     "build": "npm run validate && node src/database/pool.js up",
-    "start": "node index.js",
-    "validate": "./node_modules/.bin/eslint ."
+    "start": "node index.js"
   },
   "author": "Bram Mittendorff",
   "license": "MIT",
@@ -16,9 +16,7 @@
     "eris": "^0.13.4",
     "mysql": "^2.18.1",
     "mysql-migrations": "^1.0.7",
-    "request": "^2.88.2"
-  },
-  "devDependencies": {
+    "request": "^2.88.2",
     "eslint": "^7.15.0",
     "eslint-plugin-node": "^11.1.0"
   }
