@@ -1,1 +1,1 @@
-worker: node src/database/pool.js up && node index.js
+worker: npm run build && npm run start
