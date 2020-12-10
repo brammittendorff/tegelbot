@@ -22,6 +22,6 @@ async function create(msg, authorId, message, select=true) {
             });
         });
     }
-};
+}
 
 module.exports = { create }

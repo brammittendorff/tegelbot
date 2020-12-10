@@ -1,13 +1,13 @@
-let dotenv = require("dotenv");
-let Eris = require("eris");
-let tileDatabase = require('./src/database/main');
-let tileCreate = require('./src/tile/create');
+const dotenv = require("dotenv");
+const Eris = require("eris");
+const tileDatabase = require('./src/database/main');
+const tileCreate = require('./src/tile/create');
 
 dotenv.config()
 
 String.prototype.format = function() {
-    a = this;
-    for (k in arguments) {
+    let a = this;
+    for (let k in arguments) {
         a = a.replace("{" + k + "}", arguments[k])
     }
     return a
@@ -54,7 +54,7 @@ bot.on("messageCreate", (msg) => {
                     const totalTiles = await tileDatabase.getTotalTiles(authorId);
                     let totalPages = Math.ceil(totalTiles[0].totalTiles / 10)
                     let pagination = '';
-                    for (i=1; i <= totalPages; i++) {
+                    for (let i = 1; i <= totalPages; i++) {
                         if (page >= 1 && page == i) {
                             pagination += "[{0}] ".format(i);
                         } else {

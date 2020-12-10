@@ -46,7 +46,7 @@ Select a tile
 /tile select <tilenumber>
 ```
 
-## Code
+## Deployment
 
 ### Add bot to server
 
@@ -55,6 +55,20 @@ Select a tile
 ### Deploy to Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/brammittendorff/tegelbot)
+
+## Development
+
+### Create an environment
+
+Create a `.env` file with the following contents:
+
+```
+DISCORD_BOT_TOKEN="discordbottoken"
+DATABASE_HOSTNAME="dbhostname"
+DATABASE_USERNAME="dbusername"
+DATABASE_PASSWORD="dbpassword"
+DATABASE_DATABASE="dbname"
+```
 
 ### Migrations
 
