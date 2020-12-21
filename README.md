@@ -56,7 +56,7 @@ Select a tile
 
 ### Add bot to server
 
-[Add to server](https://discord.com/api/oauth2/authorize?client_id=764061123501752330&permissions=518208&scope=bot)
+[Add to server](https://discord.com/api/oauth2/authorize?client_id=790588934894649365&permissions=129024&scope=bot)
 
 ### Deploy to Heroku
 
