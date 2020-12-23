@@ -1,6 +1,9 @@
 let tileDatabase = require('../database/main');
-const { createCanvas, loadImage } = require('canvas');
+const { registerFont, createCanvas, loadImage } = require('canvas');
 const canvasTxt = require('canvas-txt').default
+
+registerFont('static/fonts/DancingScript-Regular.ttf', { family: 'Dancing_Script' })
+registerFont('static/fonts/PlayfairDisplay-Regular.ttf', { family: 'Playfair_Display' })
 
 async function create(msg, authorId, message, select=true) {
 
@@ -17,12 +20,10 @@ async function create(msg, authorId, message, select=true) {
             tileDatabase.addTile(authorId, message);
         }
 
-        loadImage('images/2.jpg').then((image) => {  
+        loadImage('static/images/2.jpg').then((image) => {  
             let myFonts = [
-                'Arial',
-                // 'Palatino Linotype',
-                // 'Book Antiqua',
-                // 'Times New Roman',
+                'Dancing_Script',
+                'Playfair_Display',
             ];
             let randomFont = myFonts[Math.floor(Math.random() * myFonts.length)];
     
