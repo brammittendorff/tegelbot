@@ -19,10 +19,10 @@ async function create(msg, authorId, message, select=true) {
 
         loadImage('images/2.jpg').then((image) => {  
             let myFonts = [
-                'Georgia',
-                'Palatino Linotype',
-                'Book Antiqua',
-                'Times New Roman',
+                'Arial',
+                // 'Palatino Linotype',
+                // 'Book Antiqua',
+                // 'Times New Roman',
             ];
             let randomFont = myFonts[Math.floor(Math.random() * myFonts.length)];
     
