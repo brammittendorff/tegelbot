@@ -43,4 +43,13 @@ async function deleteTile(authorId, id) {
     }
 }
 
-module.exports = { getTile, getTiles, getTotalTiles, addTile, deleteTile }
+async function deleteAllTiles(authorId) {
+    let stmt = `DELETE FROM tiles WHERE member_id=?`;
+    try {
+        return pool.query(stmt, [authorId]);
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+module.exports = { getTile, getTiles, getTotalTiles, addTile, deleteTile, deleteAllTiles }

@@ -79,10 +79,17 @@ bot.on("messageCreate", (msg) => {
             })();
         } else if (msg.content.includes(prefixDelete)) {
             let tileId = parseInt(msg.content.replace(prefixDelete, ''));
-            (async () => {
-                await tileDatabase.deleteTile(authorId, tileId);
-                bot.createMessage(msg.channel.id, '```Deleted tile: {0}```'.format(tileId));
-            })();
+            if (msg.content.includes('delete all')) {
+                (async () => {
+                    await tileDatabase.deleteAllTiles(authorId);
+                    bot.createMessage(msg.channel.id, '```Deleted all tiles```');
+                })();
+            } else {
+                (async () => {
+                    await tileDatabase.deleteTile(authorId, tileId);
+                    bot.createMessage(msg.channel.id, '```Deleted tile: {0}```'.format(tileId));
+                })();
+            }
         }
     }
 });
