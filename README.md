@@ -1,5 +1,7 @@
 # Tegeltjes bot for discord
- 
+
+Soon there will be alot of more functions and we will create a v1.0.0 version.
+
 Sometimes people say strange things at work like: Stop it with the good idea's, i will think of something myself. Then we always put it with a marker on a tile on the wall. Now I created a bot that will do exacly the same but then in discord.
 
 When you add this bot to the channel it will look for messages with `/tile`.
