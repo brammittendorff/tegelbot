@@ -4,7 +4,6 @@ const canvasTxt = require('canvas-txt').default
 
 registerFont('static/fonts/DancingScript-Regular.ttf', { family: 'Dancing_Script' })
 registerFont('static/fonts/PlayfairDisplay-Regular.ttf', { family: 'Playfair_Display' })
-registerFont('static/fonts/Amita-Regular.ttf', { family: 'Amita_Regular' })
 
 async function create(msg, authorId, message, select=true) {
 
