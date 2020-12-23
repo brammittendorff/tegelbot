@@ -25,7 +25,6 @@ async function create(msg, authorId, message, select=true) {
             let myFonts = [
                 'Dancing_Script',
                 'Playfair_Display',
-                'Amita_Regular',
             ];
             let randomFont = myFonts[Math.floor(Math.random() * myFonts.length)];
     
